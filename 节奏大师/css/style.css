@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.wrap {
+    width: 1080px;
+    height: 600px;
+    margin: 50px auto 0;
+    background: url(../images/bg.png) no-repeat center;
+    position: relative;
+}
+
+.linebox {
+    width: 1072px;
+    height: 528px;
+    position: absolute;
+    top: 36px;
+    left: 4px;
+    overflow: hidden;
+    z-index: 666;
+    cursor: pointer;
+}
+
+.light {
+    width: 1045px;
+    height: 26px;
+    background: url(../images/light.png);
+    position: absolute;
+    bottom: 70px;
+    left: 18px;
+    transition: .3s;
+}
+
+.cover {
+    /*background: red;*/
+    width: 1080px;
+    height: 500px;
+    position: absolute;
+    left: 0;
+    top: 11px;
+    z-index: 999;
+}
+
+.scoreboard {
+    width: 100px;
+    height: 200px;
+    background: url(../images/scoreboard.png);
+    border-radius: 10px;
+    font-size: 50px;
+    color: #fff;
+    text-align: center;
+    line-height: 250px;
+}
+
+img {
+    -webkit-user-drag: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+img:after {
+    content: "";
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    background: red;
+}
+
+.startmenu, .endmenu {
+    width: 600px;
+    height: 300px;
+    background: linear-gradient(to bottom, #00467c, #05a5f1);
+    position: fixed;
+    left: 50%;
+    margin-left: -300px;
+    z-index: 9999;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.startmenu .effect, .endmenu .effect {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: all 0.3s cubic-bezier(0.74, 0.15, 0.11, 0.85);
+    background: rgba(255,255,255,.3);
+    border-radius: 20px;
+}
+
+.startmenu:hover .effect, .endmenu:hover .effect {
+    top: 300px;
+}
+    
+.bg {
+    background: rgb(255,255,255);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 6666;
+}
+
+.startmenu .title {
+    width: 600px;
+    height: 290px;
+    background: url(../images/title.png);
+}
+
+.endmenu .title {
+    width: 390px;
+    height: 103px;
+    margin: 20px auto;
+    background: url(../images/end.png);
+}
+
+.endmenu .totalscore {
+    color: #fff;
+    font-size: 100px;
+    text-align: center;
+}
